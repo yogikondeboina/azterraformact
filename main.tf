@@ -19,7 +19,7 @@ provider "azurerm" {
 module "RG" {
 source = "./resourcegroup"
 location = var.location
-resoursource_group_name = var.resource_group_name  
+resource_group_name = var.resource_group_name  
 }
 
 # module "storage_account" {
