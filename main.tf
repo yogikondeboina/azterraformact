@@ -13,13 +13,14 @@ terraform {
     }
 
 }
-
 provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "state-demo-secure" {
-  name     = "state-demo"
-  location = "eastus"
-}
-
+# module "storage_account" {
+#   source  = "./resources/storage"
+#   resource_group_name   = "rg-demo-internal-shared-westeurope-002"
+#   location              = "westeurope"
+#   storage_account_name  = "mystorage"
+# }
+ 
