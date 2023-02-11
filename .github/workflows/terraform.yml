@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'Terraform plan'
     env:
       ARM_CLIENT_ID: ${{ secrets.CLIENTID }}
       ARM_CLIENT_SECRET: ${{ secrets.CLIENTSECRET }}
