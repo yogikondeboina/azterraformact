@@ -15,7 +15,3 @@ variable "account_tier" {
 variable "account_replication_type" {
  type = string  
 }
-
-variable "azurerm_resource_group" {
-  type = string
-}
