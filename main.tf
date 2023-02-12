@@ -16,16 +16,16 @@ terraform {
 provider "azurerm" {
   features {}
 }
-module "RG" {
-source = "./resourcegroup"
-location = var.location
-resource_group_name = var.resource_group_name  
-}
-
-# module "storage_account" {
-#   source  = "./resources/storage"
-#   resource_group_name   = "rg-demo-internal-shared-westeurope-002"
-#   location              = "westeurope"
-#   storage_account_name  = "mystorage"
+# module "RG" {
+# source = "./resourcegroup"
+# location = var.location
+# resource_group_name = var.resource_group_name  
 # }
+
+module "storage_account" {
+  source  = "./resources/storageaccount"
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  storage_account_name  = var.azurerm_storage_account
+}
  
