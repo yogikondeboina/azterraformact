@@ -6,12 +6,12 @@ variable "azurerm_resource_group" {
  type = string  
 }
 variable "location" {
- typedefault = string  
+ type = string  
 }
 
 variable "account_tier" {
  type   = string   
 }
 variable "account_replication_type" {
- typetype = string  
+ type = string  
 }
