@@ -22,11 +22,13 @@ provider "azurerm" {
 # resource_group_name = var.resource_group_name  
 # }
 
-module "storage_account" {
-  source  = "./storageaccount"
-  resource_group_name   = var.resource_group_name
-  location              = var.location
-  storage_account_name  = var.azurerm_storage_account
-  storage_name          = var.azurerm_storage_account
+module "azure_storage_account" {
+  source = "./storageaccount"
+
+  name                 = local.storage_account_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+  account_tier         = var.account_tier
+  account_replication  = var.account_replication
 }
  
