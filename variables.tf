@@ -4,6 +4,6 @@ variable "location" {
 variable "resource_group_name" {
   type = string
 }
-variable "storage_account" {
-  type = string  
+variable "azurerm_storage_account" {
+type = string  
 }
