@@ -30,7 +30,7 @@ provider "azurerm" {
 # }
 module "app_service_plan" {
   source = "./resources/storageaccount"
-  app_service_plan_name   = var.app_service_plan_name
+  #app_service_plan_name   = var.app_service_plan_name
   resource_group_name  = var.resource_group_name
   location             = var.location
   sku                  = var.app_service_plan_sku
@@ -39,7 +39,7 @@ module "app_service_plan" {
 # App Service app module
 module "app_service_app" {
   source = "./resources/storageaccount"
-  app_service_name  = var.app_service_name
+ # app_service_name  = var.app_service_name
   resource_group_name  = var.resource_group_name
   location             = var.location
   app_service_plan_name = module.app_service_plan.name
