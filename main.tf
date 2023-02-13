@@ -16,15 +16,16 @@ terraform {
 provider "azurerm" {
   features {}
 }
-# module "RG" {
-# source = "./resourcegroup"
-# location = var.location
-# resource_group_name = var.resource_group_name  
-# }
+module "RG" {
+source = "./resourcegroup"
+location = var.location
+resource_group_name = var.resource_group_name  
+}
 
 module "azure_storage_account" {
   source = "./storageaccount"
-  storage_account_name     = var.storage_account_name
+  storage_account_name      = var.storage_account_name
   location                  = var.location
-  }
+  resource_group_name       = var.resource_group_name
+}
  
