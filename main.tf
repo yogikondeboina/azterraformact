@@ -30,7 +30,7 @@ provider "azurerm" {
 # }
 
  module "app_service" {
-  source = "./appservices"
+  source = "./resources/appservices"
 
   app_service_name      = var.app_service_name
   location              = var.location
