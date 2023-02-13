@@ -17,19 +17,19 @@ provider "azurerm" {
   features {}
 }
 # module "RG" {
-# source = "./resourcegroup"
+# source = "./resources/resourcegroup"
 # location = var.location
 # resource_group_name = var.resource_group_name  
 # }
 
 # module "storageaccount" {
-#   source = "./storageaccount"
+#   source = "./resources/storageaccount"
 #   storage_account_name      = var.storage_account_name
 #   location                  = var.location
 #   resource_group_name       = var.resource_group_name
 # }
 module "app_service_plan" {
-  source = "./app_service_plan"
+  source = "./resources/appservices"
 
   app_service_plan_name = var.app_service_plan_name
   location              = var.location
