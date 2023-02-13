@@ -26,6 +26,6 @@ module "azure_storage_account" {
   source = "./storageaccount"
   storage_account_name     = var.storage_account_name
   location                  = var.location
-  azurerm_resource_group    = var.resource_group_name
+  resource_group_name   = var.resource_group_name
 }
  
