@@ -15,3 +15,7 @@ variable "app_service_plan_name" {
 variable "app_service_name" {
  type = string  
 }
+variable "app_service_plan_sku" {
+  type = string
+  default = "B1"
+}
