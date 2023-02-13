@@ -9,7 +9,7 @@ terraform {
         resource_group_name  = "terraform"
         storage_account_name = "tfstorefile"
         container_name       = "statefiles"
-        key                  = "STterraform.tfstate"
+        key                  = "WBterraform.tfstate"
     }
 
 }
@@ -22,10 +22,17 @@ provider "azurerm" {
 # resource_group_name = var.resource_group_name  
 # }
 
-module "storageaccount" {
-  source = "./storageaccount"
-  storage_account_name      = var.storage_account_name
-  location                  = var.location
-  resource_group_name       = var.resource_group_name
+# module "storageaccount" {
+#   source = "./storageaccount"
+#   storage_account_name      = var.storage_account_name
+#   location                  = var.location
+#   resource_group_name       = var.resource_group_name
+# }
+
+ module "app_service" {
+  source = "./appservices"
+
+  app_service_name      = var.app_service_name
+  location              = var.location
+  resource_group_name   = var.resource_group_name
 }
- 
