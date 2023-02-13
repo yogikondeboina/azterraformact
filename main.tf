@@ -24,7 +24,7 @@ resource_group_name = var.resource_group_name
 
 module "storageaccount" {
   source = "./storageaccount"
-  storage_account_name      = var.storage_account_name
+  name      = var.storage_account_name
   location                  = var.location
   resource_group_name       = var.resource_group_name
 }
