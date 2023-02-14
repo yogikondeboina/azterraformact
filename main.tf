@@ -44,11 +44,3 @@ provider "azurerm" {
 #   location             = var.location
 #   app_service_plan_name = module.app_service_plan.name
 # }
-module "data_factory" {
-  source = "./resources/resourcegroup"
-  name                    = "yogiadf"
-  location = var.location
-  resource_group_name = var.resource_group_name
-  tags                    = { environment = "dev" }
-  storage_account_name    = var.storage_account_name
-}
