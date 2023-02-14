@@ -9,7 +9,7 @@ variable "location" {
  type = string  
 }
 variable "data_factory_name" {
-  type = data_factory_name
+  type = string
   
 }
 
