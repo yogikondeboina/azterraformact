@@ -44,3 +44,12 @@ provider "azurerm" {
 #   location             = var.location
 #   app_service_plan_name = module.app_service_plan.name
 # }
+module "data_factory" {
+  source = "./data_factory"
+
+  name                = "example-data-factory"
+  location            = "eastus"
+  resource_group_name = "example-resource-group"
+  tags                = { environment = "dev" }
+  storage_account_name = "example-storage-account"
+}
