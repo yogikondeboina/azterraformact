@@ -45,7 +45,7 @@ provider "azurerm" {
 #   app_service_plan_name = module.app_service_plan.name
 # }
 module "data_factory" {
-sourcecount = "./resources/datafactory" 
+source = "./resources/datafactory" 
 resource_group_name = var.resource_group_name  
 location = var.location
 adf_name  =  var.ADFNAME 
