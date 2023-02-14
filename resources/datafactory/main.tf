@@ -31,4 +31,16 @@ resource "azurerm_storage_account" "example" {
 
   tags = var.tags
 }
+vsts_git_configuration {
+  account_name             = "yogikondeboina"
+  project_name             = "ContosoAir"
+  repository_name          = "ContosoAir"
+  collaboration_branch     = "master"
+#   root_folder              = ""
+#   tenant_id                = "my-tenant-id"
+#   service_principal_id     = "my-sp-id"
+#   service_principal_secret = "my-sp-secret"
+  use_manual_intervention  = false
+#   last_commit_id           = ""
+}
 
