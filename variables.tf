@@ -8,6 +8,10 @@ variable "resource_group_name" {
 variable "location" {
  type = string  
 }
+variable "data_factory_name" {
+  type = data_factory_name
+  
+}
 
 # variable "app_service_plan_name" {
 #  type = string  
