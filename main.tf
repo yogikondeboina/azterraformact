@@ -30,7 +30,7 @@ provider "azurerm" {
 # }
 # module "app_service_plan" {
 #   source = "./resources/storageaccount"
-#   #app_service_plan_name   = var.app_service_plan_name
+#   app_service_plan_name   = var.app_service_plan_name
 #   resource_group_name  = var.resource_group_name
 #   location             = var.location
 #   sku                  = var.app_service_plan_sku
@@ -39,18 +39,16 @@ provider "azurerm" {
 # # App Service app module
 # module "app_service_app" {
 #   source = "./resources/storageaccount"
-#  # app_service_name  = var.app_service_name
+#   app_service_name  = var.app_service_name
 #   resource_group_name  = var.resource_group_name
 #   location             = var.location
 #   app_service_plan_name = module.app_service_plan.name
 # }
 module "data_factory" {
-  source = "./resources/storageaccount"
-  
-  name                = "example-data-factory"
+  source = "./resources/resourcegroup"
+  name                    = "yogiadf"
   location = var.location
-resource_group_name = var.resource_group_name  
-  tags                = {
-    environment = "dev"
-  }
+  resource_group_name = var.resource_group_name
+  tags                    = { environment = "dev" }
+  storage_account_name    = var.storage_account_name
 }

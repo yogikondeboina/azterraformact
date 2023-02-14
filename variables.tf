@@ -19,9 +19,7 @@ variable "location" {
 #   type = string
 #   default = "B1"
 # }
-variable "name" {
-  type = string
-}
+
 
 
 
