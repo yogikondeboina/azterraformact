@@ -9,13 +9,24 @@ variable "location" {
  type = string  
 }
 
-variable "app_service_plan_name" {
- type = string  
+# variable "app_service_plan_name" {
+#  type = string  
+# }
+# variable "app_service_name" {
+#  type = string  
+# }
+# variable "app_service_plan_sku" {
+#   type = string
+#   default = "B1"
+# }
+variable "module_create" {
+ dedescription = "resource create"  
+  type = bool
 }
-variable "app_service_name" {
- type = string  
+
+variable "module_adIndex" {
+deadefault = "01"  
 }
-variable "app_service_plan_sku" {
-  type = string
-  default = "B1"
+variable "adfname" {
+ tytype = string 
 }
