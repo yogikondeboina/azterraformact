@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=2.0.0"
+      version = "=2.46.0"
     }
   }
     backend "azurerm" {
@@ -45,8 +45,12 @@ provider "azurerm" {
 #   app_service_plan_name = module.app_service_plan.name
 # }
 module "data_factory" {
-source = "./resources/datafactory" 
+  source = "./resources/storageaccount"
+  
+  name                = "example-data-factory"
+  location = var.location
 resource_group_name = var.resource_group_name  
-location = var.location
-adf_name  =  var.ADFNAME 
+  tags                = {
+    environment = "dev"
+  }
 }

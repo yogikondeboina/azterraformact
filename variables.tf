@@ -19,14 +19,18 @@ variable "location" {
 #   type = string
 #   default = "B1"
 # }
-variable "module_create" {
- description = "resource create"  
-  type = bool
+variable "name" {
+  type = string
 }
 
-variable "module_adIndex" {
-  default = "01"  
+variable "location" {
+  type = string
 }
-variable "adfname" {
-    type = string 
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "tags" {
+  type = map(string)
 }
