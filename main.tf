@@ -45,11 +45,15 @@ provider "azurerm" {
 #   app_service_plan_name = module.app_service_plan.name
 # }
 module "data_factory" {
-  source = "./resources/datafactory"
-
-  name                = "example-data-factory"
-  location            = "eastus"
-  resource_group_name = "example-resource-group"
-  tags                = { environment = "dev" }
-  storage_account_name = "example-storage-account"
+  source              = "./resources/datafactory"
+  data_factory_name   = var.data_factory_name
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  vsts_account_name             = "my-vsts-account"
+  vsts_project_name             = "my-vsts-project"
+  vsts_repository_name          = "my-vsts-repo"
+  vsts_tenant_id                = "my-tenant-id"
+  vsts_service_principal_id     = "my-sp-id"
+  vsts_service_principal_secret = "my-sp-secret"
 }
+

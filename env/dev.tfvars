@@ -3,7 +3,7 @@ resource_group_name   = "yogiRG"
 storage_account_name  = "yogist"
 app_service_name      = "yogiwb"
 app_service_plan_name = "yogisp011"
-name                  = "yogiadf"
-tags                  = "adf"
-
-
+data_factory_name     = "yogiadf"
+vsts_account_name     = "yogikondeboina"
+vsts_project_name     = "ContosoAir"
+vsts_repository_name  = "ContosoAir"
