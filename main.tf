@@ -52,8 +52,8 @@ module "data_factory" {
   vsts_account_name             = "my-vsts-account"
   vsts_project_name             = "my-vsts-project"
   vsts_repository_name          = "my-vsts-repo"
-  vsts_tenant_id                = "my-tenant-id"
-  vsts_service_principal_id     = "my-sp-id"
-  vsts_service_principal_secret = "my-sp-secret"
+  # vsts_tenant_id                = "my-tenant-id"
+  # vsts_service_principal_id     = "my-sp-id"
+  # vsts_service_principal_secret = "my-sp-secret"
 }
 
