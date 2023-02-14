@@ -4,7 +4,7 @@ variable "module_create" {
 }
 
 variable "module_adIndex" {
-d   default =  = "01"  
+d   default  = "01"  
 }
 variable "module_create" {
  description = "resource create"  
