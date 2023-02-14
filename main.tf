@@ -45,7 +45,7 @@ provider "azurerm" {
 #   app_service_plan_name = module.app_service_plan.name
 # }
 module "data_factory" {
-  source = "./data_factory"
+  source = "./resources/datafactory"
 
   name                = "example-data-factory"
   location            = "eastus"
