@@ -20,13 +20,13 @@ variable "location" {
 #   default = "B1"
 # }
 variable "module_create" {
- dedescription = "resource create"  
+ description = "resource create"  
   type = bool
 }
 
 variable "module_adIndex" {
-deadefault = "01"  
+  default = "01"  
 }
 variable "adfname" {
- tytype = string 
+    type = string 
 }
