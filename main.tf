@@ -13,7 +13,7 @@ terraform {
     }
 
 }
-provider "azurerm" {
+terraform providers "azurerm" {
  # version = ">=2.9.0"
   features {}
 }
