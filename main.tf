@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=2.43.0"
+      version = "~>2.0"
     }
   }
     backend "azurerm" {
@@ -45,10 +45,15 @@ provider "azurerm" {
 #   location             = var.location
 #   app_service_plan_name = module.app_service_plan.name
 # }
-module "data_factory" {
- source      = "./resources/adf"
- location            = var.location
- resource_group_name = var.resource_group_name 
- adf_name            = var.ADFNAME
-}
+# module "data_factory" {
+#  source      = "./resources/adf"
+#  location            = var.location
+#  resource_group_name = var.resource_group_name 
+#  adf_name            = var.ADFNAME
+# }
 
+resource "azuerm_data_factory" "adf" {
+ name     = "yadf"
+ location = "eastus"
+ resource_group_name =  "yogiRG"
+} 
