@@ -14,8 +14,8 @@ terraform {
 
 }
 provider "azurerm" {
+  version = ">=2.9.0"
   features {}
-}
 # module "RG" {
 # source = "./resources/resourcegroup"
 # location = var.location
@@ -48,6 +48,6 @@ module "data_factory" {
 source      = "./resources/adf"
  location            = var.location
  resource_group_name = var.resource_group_name 
- adf_name            =var.ADFNAME
+ adf_name            = var.ADFNAME
 }
 
