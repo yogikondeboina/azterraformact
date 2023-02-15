@@ -24,7 +24,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        #working-directory: adf
+        working-directory: adf
       
     steps:
     # Checkout the repository to the GitHub Actions runner
