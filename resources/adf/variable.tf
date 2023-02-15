@@ -1,6 +1,6 @@
 variable "module_create" {
  type        = bool
- dedefault = true  
+   default = true  
 }
 variable "resource_group_name" {
  type = string  
