@@ -52,7 +52,7 @@ provider "azurerm" {
 #  adf_name            = var.ADFNAME
 # }
 
-resource "azuerm_data_factory" "adf" {
+resource "azurerm_data_factory" "adf" {
  name     = "yadf"
  location = "eastus"
  resource_group_name =  "yogiRG"
