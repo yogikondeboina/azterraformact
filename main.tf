@@ -16,6 +16,7 @@ terraform {
 provider "azurerm" {
   version = ">=2.9.0"
   features {}
+}
 # module "RG" {
 # source = "./resources/resourcegroup"
 # location = var.location
