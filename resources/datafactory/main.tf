@@ -3,6 +3,6 @@ resource "azuerm_data_factory" "adf" {
  location             = var.location
  resourcr_group_name   = var.resource_group_name
  idenentity {
-    type = "ayatemAssigned"
+    type = "sayatemAssigned"
  }  
 }
