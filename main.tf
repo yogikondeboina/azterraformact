@@ -1,22 +1,22 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~>2.0"
-    }
-  }
-    backend "azurerm" {
-        resource_group_name  = "terraform"
-        storage_account_name = "tfstorefile"
-        container_name       = "statefiles"
-        key                  = "WBterraform.tfstate"
-    }
+# terraform {
+#   required_providers {
+#     azurerm = {
+#       source  = "hashicorp/azurerm"
+#       version = "~>2.0"
+#     }
+#   }
+#     backend "azurerm" {
+#         resource_group_name  = "terraform"
+#         storage_account_name = "tfstorefile"
+#         container_name       = "statefiles"
+#         key                  = "WBterraform.tfstate"
+#     }
 
-}
-provider "azurerm" {
- # version = ">=2.9.0"
-  features {}
-}
+# }
+# provider "azurerm" {
+#  # version = ">=2.9.0"
+#   features {}
+# }
 # module "RG" {
 # source = "./resources/resourcegroup"
 # location = var.location
